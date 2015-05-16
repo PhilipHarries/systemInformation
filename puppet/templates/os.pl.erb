@@ -1,0 +1,44 @@
+<% if scope.lookupvar('::osfamily') == "windows" -%>#!C:\Strawberry\perl\bin\perl<% else -%>#!/usr/bin/perl<% end -%>
+
+use strict;
+use warnings;
+
+my $filenameredhat = '/etc/redhat-release';
+my $filenamesolaris = '/etc/release';
+my $filenamewindows = 'C:\Windows';
+
+
+print("Content-type: text/html\n\n");
+
+if( -e $filenameredhat )
+{
+        open FILE, "<", $filenameredhat;
+        my @lines = <FILE>;
+        chomp($lines[0]);
+        print($lines[0]);
+        close (FILE);
+}
+elsif( -e $filenamesolaris )
+{
+
+        open FILE, "<", $filenamesolaris;
+        my @lines = <FILE>;
+        $lines[0] =~ s/^ *//;
+        $lines[0] =~ s/\w+_\w+_\w+\s{1}.+//;
+        chomp($lines[0]);
+        print($lines[0]);
+        close (FILE);
+}
+elsif( -e $filenamewindows )
+{
+        my $release = `systeminfo | findstr /B /C:"OS Name"`;
+        $release =~ s/^OS Name:\s*M/M/;
+        chomp($release);
+        print("\n$release");
+}
+else
+{
+        print("Operating System Not Known");
+}
+#print("\n");
+exit 0;

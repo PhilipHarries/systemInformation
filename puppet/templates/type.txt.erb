@@ -1,0 +1,7 @@
+<% if scope.lookupvar('::virtual') == "kvm" -%>
+KVM
+<% elsif scope.lookupvar('::virtual') == "zone" -%>
+zone
+<% else -%>
+Physical
+<% end -%>
