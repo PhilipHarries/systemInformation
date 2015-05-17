@@ -21,12 +21,12 @@ var includes = {
 	os:		[ 'solaris', 'windows', 'redhat', 'noanswer' ],
 	networks:	[ '192.168.2' ],
 
-	physical:	function(){return isInArray('physical', this.types)},
-	virtual:	function(){return isInArray('virtual', this.types)},
-	solaris:	function(){return isInArray('solaris', this.os)},
-	windows:	function(){return isInArray('windows', this.os)},
-	redhat:		function(){return isInArray('redhat', this.os)},
-	noanswer:	function(){return isInArray('noanswer', this.os)},
+	physical:	function(){return isInArray('physical', this.types);},
+	virtual:	function(){return isInArray('virtual', this.types);},
+	solaris:	function(){return isInArray('solaris', this.os);},
+	windows:	function(){return isInArray('windows', this.os);},
+	redhat:		function(){return isInArray('redhat', this.os);},
+	noanswer:	function(){return isInArray('noanswer', this.os);}
 	};
 
 
