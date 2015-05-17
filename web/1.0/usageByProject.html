@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<style>
+		#chart {
+			height: 360px;
+			width: 360px;
+			position: relative;
+			}
+		body {
+			margin: 10 auto;
+			}
+		.tooltip {
+			background: #eee;
+			box-shadow: 0 0 5px #999999;
+			color: #333;
+			display: none;
+			font-size: 11px;
+			left: 130px;
+			padding: 10px;
+			position: absolute;
+			text-align: center;
+			top: 95px;
+			width: 100px;
+			z-index: 10;
+			}
+
+		rect {
+			cursor: pointer;
+			stroke-width: 2;
+			}
+		rect.disabled {
+			fill: transparent !important;
+			}
+	</style>
+</head>
+<body>
+
+<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+<script src="./jslib/jquery-latest.min.js"></script>
+<script src="./jslib/d3.v3.min.js"></script>
+<script src="./jslib/vmRawDetails.js"></script>
+<script src="./usageByProject.js"></script>
+
+
+</body>
+</html>
