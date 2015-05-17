@@ -63,7 +63,7 @@ var Project = {
 				return rc;
 			},
 	getTextValue:	function(){ 
-				rv=this.getValue();
+				var rv=this.getValue();
 				if(sumFrom === 'cpu'){rv=Math.round(rv) + " cpus";}
 				if(sumFrom === 'mem'){rv=Math.round(rv/(1024*1024)) + " gb";}
 				return rv;
@@ -472,7 +472,7 @@ function redrawPie(){
 
 
 var path;
-//var pie;
+var pie;
 var arc;
 var tooltip;
 var legend;
