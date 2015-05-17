@@ -1,3 +1,5 @@
+"use strict";
+
 // TODO: would be quite nice if this accepted CIDR notation
 var availableNetworks = [ '10.20.30', '192.168.2', '192.168.0', '172.25', '172.30' ];
 
