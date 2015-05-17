@@ -60,5 +60,6 @@ The pie chart also comes complete with tooltips.
 
 
 
+For more information check out: http://philipharries.github.io/systemInformation/
 
-Later, content will be available here: http://philipharries.github.io/systemInformation/
+An interactive demo populated with example data can be found here:  http://philipharries.github.io/systemInformation/web/1.0/usageByProject.html
