@@ -1,3 +1,7 @@
+//
+
+// this is an example file!
+
 var systems = {
 	"servers":	[
 {
